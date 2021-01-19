@@ -53,4 +53,27 @@ public class CalculadoraUsandoWhile{
         }
         System.out.println(suma);
     }
+
+    /**
+     * método para introducir un número y ver si es primo o no
+     */
+    public boolean esPrimo(int n){
+        boolean numeroPrimo = true;
+        int divisor = 2;
+        if(n > 1){
+            while(divisor <= n - 1 && numeroPrimo){
+                if(n % divisor != 0){
+                    divisor++;
+                }
+                else{
+                    numeroPrimo = false;
+                }
+            }
+        }
+        else{
+            numeroPrimo = false;
+            System.out.println("El número debe ser mayor que 1");
+        }
+        return numeroPrimo;
+    }
 }
